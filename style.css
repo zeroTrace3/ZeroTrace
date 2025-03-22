@@ -32,13 +32,26 @@ p {
     font-size: 1.2em;
     text-decoration: none;
     color: white;
-    background-color: #00ffcc;
     border-radius: 5px;
     transition: 0.3s;
 }
 
-.btn:hover {
-    background-color: #008f7a;
+/* زر Delta (أسود) */
+.btn-delta {
+    background-color: #000000;
+}
+
+.btn-delta:hover {
+    background-color: #333333;
+}
+
+/* زر Codex (أحمر) */
+.btn-codex {
+    background-color: #ff0000;
+}
+
+.btn-codex:hover {
+    background-color: #cc0000;
 }
 
 footer {
