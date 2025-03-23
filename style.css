@@ -1,4 +1,4 @@
-/* تعيين الخط والخلفية العامة */
+/* إعدادات عامة */
 body {
     font-family: Arial, sans-serif;
     background-color: #111;
@@ -8,7 +8,7 @@ body {
     padding: 0;
 }
 
-/* زر القائمة ☰ */
+/* زر القائمة */
 .menu-btn {
     position: absolute;
     top: 10px;
@@ -20,7 +20,7 @@ body {
     color: white;
 }
 
-/* القائمة الجانبية */
+/* الشريط الجانبي */
 .sidebar {
     position: fixed;
     top: 0;
@@ -31,9 +31,11 @@ body {
     padding-top: 60px;
     transition: 0.3s;
 }
+
 .sidebar.open {
     right: 0;
 }
+
 .sidebar a {
     display: block;
     padding: 15px;
@@ -42,6 +44,7 @@ body {
     border-bottom: 1px solid gray;
     font-size: 18px;
 }
+
 .sidebar a:hover {
     background-color: gray;
 }
@@ -49,26 +52,65 @@ body {
 /* الحاوية الرئيسية */
 .container {
     padding: 50px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-/* الأزرار */
+/* أزرار التحميل */
 .btn {
     display: block;
     margin: 10px auto;
-    padding: 10px;
-    width: 200px;
+    padding: 12px;
+    width: 220px;
     text-align: center;
-    border-radius: 5px;
+    border-radius: 8px;
     text-decoration: none;
     font-size: 18px;
     font-weight: bold;
+    transition: 0.3s;
 }
-.btn-codex { background-color: red; color: white; }
-.btn-delta { background-color: gray; color: white; }
-.btn-discord { background-color: blue; color: white; }
-.btn-download { background-color: lightblue; color: black; }
+
+.btn-codex {
+    background-color: red;
+    color: white;
+}
+
+.btn-delta {
+    background-color: gray;
+    color: white;
+}
+
+.btn-discord {
+    background-color: blue;
+    color: white;
+}
+
+.btn-download {
+    background-color: lightblue;
+    color: black;
+}
 
 /* قسم فورت نايت */
 #fortnite {
     display: none;
-    background-color: darkblue
+    background-color: #001f3f;
+    padding: 50px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* صورة فورت نايت */
+.fortnite-img {
+    width: 100%;
+    max-width: 400px;
+    display: block;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+}
