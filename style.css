@@ -1,21 +1,10 @@
-/* إعدادات الصفحة */
 body {
     font-family: Arial, sans-serif;
     background-color: #111;
     color: white;
     text-align: center;
-    margin: 0;
-    padding: 0;
 }
 
-/* صورة شعار سيرفر الديسكورد */
-.server-banner img {
-    width: 100%;
-    max-height: 200px;
-    object-fit: cover;
-}
-
-/* زر القائمة */
 .menu-btn {
     position: absolute;
     top: 10px;
@@ -27,7 +16,6 @@ body {
     color: white;
 }
 
-/* القائمة الجانبية */
 .sidebar {
     position: fixed;
     top: 0;
@@ -55,29 +43,27 @@ body {
     background-color: gray;
 }
 
-/* تنسيق القسم */
 .container {
     padding: 50px;
 }
 
-/* زر تحميل Fortnite */
-.fortnite-container {
-    display: none;
-    background-color: darkblue;
-    padding: 50px;
+/* صورة سيرفر الديسكورد */
+.server-banner img {
+    width: 100%;
+    max-height: 250px;
+    object-fit: cover;
 }
 
-.fortnite-img {
-    width: 250px;
-    display: block;
-    margin: 20px auto;
-    border-radius: 10px;
+/* أزرار Codex و Delta بجانب بعض */
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 10px;
 }
 
-/* الأزرار */
 .btn {
     display: inline-block;
-    margin: 10px;
     padding: 10px;
     width: 150px;
     text-align: center;
@@ -87,37 +73,29 @@ body {
     font-weight: bold;
 }
 
-.btn-codex {
-    background-color: red;
-    color: white;
-}
-
-.btn-delta {
-    background-color: gray;
-    color: white;
-}
-
-.btn-discord {
-    background-color: blue;
-    color: white;
-}
+.btn-codex { background-color: red; color: white; }
+.btn-delta { background-color: gray; color: white; }
+.btn-discord { background-color: blue; color: white; width: 200px; }
 
 .btn-download {
     background-color: lightblue;
     color: black;
+    display: block;
+    margin: 20px auto;
+    width: 200px;
 }
 
-/* جعل أزرار Codex و Delta جنبًا إلى جنب */
-.button-container {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-bottom: 15px;
+/* صورة فورت نايت */
+#fortnite {
+    display: none;
+    background-color: darkblue;
+    padding: 50px;
 }
 
-/* جعل الموقع متجاوب مع الشاشات الصغيرة */
-@media (max-width: 500px) {
-    .button-container {
-        flex-direction: column;
-    }
+.fortnite-img {
+    width: 80%;
+    max-width: 400px;
+    display: block;
+    margin: 20px auto;
+    border-radius: 10px;
 }
