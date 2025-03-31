@@ -3,18 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ZeroTrack - تحميل الها-كات</title>
+    <title>ZeroTrack - تحميل الأدوات</title>
     <link rel="stylesheet" href="style.css">
     <script>
         function openMenu() {
-            document.getElementById("sidebar").classList.toggle("open");
+            document.getElementById("sidebar").classList.add("open");
+        }
+
+        function closeMenu() {
+            document.getElementById("sidebar").classList.remove("open");
         }
 
         function showSection(sectionId) {
             document.getElementById("roblox").style.display = "none";
             document.getElementById("fortnite").style.display = "none";
             document.getElementById(sectionId).style.display = "block";
-            document.getElementById("sidebar").classList.remove("open"); // إغلاق القائمة بعد الاختيار
+            closeMenu(); // إغلاق القائمة بعد الاختيار
         }
     </script>
 </head>
@@ -22,18 +26,19 @@
     <button class="menu-btn" onclick="openMenu()">☰</button>
 
     <div id="sidebar" class="sidebar">
+        <button class="close-btn" onclick="closeMenu()">✖</button>
         <a href="#" onclick="showSection('roblox')">روبلوكس</a>
         <a href="#" onclick="showSection('fortnite')">فورت نايت</a>
     </div>
 
-    <!-- صورة سيرفر الديسكورد -->
+    <!-- صورة سيرفر الديسكورد في قسم روبلوكس فقط -->
     <div class="server-banner">
         <img src="https://i.postimg.cc/8PFpd5VJ/IMG-3131.jpg" alt="صورة سيرفر الديسكورد">
     </div>
 
     <div id="roblox" class="container">
         <h1>مرحبًا بك في ZeroTrack</h1>
-        <p>أفضل موقع لتحميل الها-كات بسهولة!</p>
+        <p>أفضل موقع لتحميل الأدوات بسهولة!</p>
 
         <div class="button-container">
             <a href="itms-services://?action=download-manifest&url=https://codex-ios.com/Install.plist" class="btn btn-codex" target="_blank">تثبيت Codex</a>
@@ -47,8 +52,10 @@
         </footer>
     </div>
 
-    <div id="fortnite">
+    <div id="fortnite" style="display: none;">
         <h1>مرحبًا بك في قسم فورتنايت</h1>
+
+        <!-- فقط صورة فورت نايت هنا -->
         <img src="https://i.postimg.cc/fLTZVWKb/IMG-3141.jpg" alt="Fortnite" class="fortnite-img">
         <a href="itms-services://?action=download-manifest&url=https://fortnite-ios.com/Install.plist" class="btn btn-download" target="_blank">تحميل</a>
     </div>
